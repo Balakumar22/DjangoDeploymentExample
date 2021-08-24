@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'base_app/base.html' %}
+{% block mc %}
+<h1>Please fill the form to login</h1>
+<form action="{% url 'dl5_app:user_login' %}" method="post">
+{% csrf_token %}
+<label for="username">UsernName:
+<input type="text" name="username"></label><br>
+<label for="password">Password:
+<input type="password" name="password"></label><br>
+<input type="submit" value="Register">
+</form>
+{% endblock mc %}
+

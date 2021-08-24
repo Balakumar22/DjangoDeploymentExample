@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'base_app/base.html' %}
+{% block mc %}
+{% if user.is_authenticated %}
+<h1>Welcome {{user}}</h1>
+{% else %}
+<h1>Welcome Mr.Unknown</h1>
+{% endif %}
+<h2>Django Password Project</h2>
+{% endblock mc %}
+

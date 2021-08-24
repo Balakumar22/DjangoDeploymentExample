@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base_app/base.html' %}
+{% block mc %}
+{% if registered %}
+<h2>Thanks for registering!</h2>
+{% else %}
+<form enctype="multipart/form-data" method="post">
+{{uform.as_p}}
+{{pform.as_p}}
+{% csrf_token %}
+<input type="submit" value="Register">
+</form>
+{% endif %}
+{% endblock mc %}
+
